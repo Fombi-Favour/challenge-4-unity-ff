@@ -37,8 +37,8 @@ public class PlayerControllerX : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Powerup"))
         {
-            Destroy(other.gameObject);
             hasPowerup = true;
+            Destroy(other.gameObject);
             StartCoroutine(PowerupCooldown());
             powerupIndicator.SetActive(true);
         }
